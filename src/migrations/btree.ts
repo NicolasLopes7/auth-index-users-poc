@@ -6,9 +6,7 @@ export const up = async () => client.query(`
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
         password VARCHAR(255) NOT NULL,
-        api_key VARCHAR(255) NOT NULL,
-        created_at TIMESTAMP NOT NULL,
-        updated_at TIMESTAMP NOT NULL
+        api_key VARCHAR(255) NOT NULL
     );
     CREATE INDEX IF NOT EXISTS api_key_index ON users USING btree (api_key);
 `)

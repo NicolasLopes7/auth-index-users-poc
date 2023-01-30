@@ -7,18 +7,16 @@ export const seed = async (size = 100000) => {
         email: faker.internet.email(),
         password: faker.internet.password(),
         api_key: faker.random.uuid(),
-        created_at: faker.date.past(),
-        updated_at: faker.date.recent()
     })
 
-    return client.query(`INSERT INTO users (name, email, password, api_key, created_at, updated_at) 
+    await client.query(`INSERT INTO users (name, email, password, api_key) 
     VALUES ${users.map((user) => `(
         '${user.name}',
         '${user.email}',
         '${user.password}',
-        '${user.api_key}',
-        '${user.created_at}',
-        '${user.updated_at}')`)
+        '${user.api_key}')`)
         .join(',')};`
     )
+
+    return users
 }
