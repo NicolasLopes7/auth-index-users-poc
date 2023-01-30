@@ -12,12 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "@types/faker": "4.1.12",
-    "benchmark": "^2.1.4",
     "faker": "4.1.0",
     "pg": "^8.9.0"
   },
   "devDependencies": {
-    "@types/benchmark": "^2.1.2",
     "@types/pg": "^8.6.6",
     "tsx": "^3.12.2",
     "typescript": "^4.9.4"
